@@ -1,0 +1,51 @@
+#!/usr/bin/env zsh
+# slice height
+S=160
+
+# line position (from center)
+P=0
+i3lock \
+    --color=282A36 \
+    --inside-color=282A36 \
+    --insidever-color=50FA7B \
+    --insidewrong-color=FF5555 \
+    --ring-color=BD93F9 \
+    --ringver-color=50FA7B \
+    --ringwrong-color=FF5555 \
+    --separator-color=F8F8F2 \
+    --line-color=F8F8F2 \
+    --keyhl-color=8BE9FD \
+    --bshl-color=FF92D0 \
+    --ring-width=10 \
+    --radius=40 \
+    --ind-pos="x+w/2:y+h/2-$P" \
+    --time-color=F8F8F2 \
+    --time-pos='ix-180:iy+12' \
+    --time-pos='ix-r-50:iy+12' \
+    --time-str='%H:%M:%S' \
+    --time-font='Iosevka Nerd Font' \
+    --time-align=2 \
+    --time-size=48 \
+    --date-color=F8F8F2 \
+    --date-pos='ix+180:iy+12' \
+    --date-pos='ix+r+50:iy+12' \
+    --date-str='%d.%m.%y' \
+    --date-font='Iosevka Nerd Font' \
+    --date-align=1 \
+    --date-size=48 \
+    --greeter-pos='x+100:iy+12' \
+    --verif-color=00000000 \
+    --wrong-color=00000000 \
+    --modif-color=00000000 \
+    --layout-color=00000000 \
+    --greeter-color=00000000 \
+    --verif-text='Greetings!' \
+    --wrong-text='*Buzzer* Incorrect!' \
+    --noinput-text='' \
+    --lock-text="workboots' linux" \
+    --lockfailed-text='Incorrect password.' \
+    --greeter-text='Welcome!' \
+    --ignore-empty-password \
+    --pass-media-keys \
+    --pass-screen-keys \
+    --clock
