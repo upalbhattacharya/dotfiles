@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+echo $(stat $2 | grep $1)
