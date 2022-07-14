@@ -1,5 +1,5 @@
 -- Birth: 2022-05-31 22:22:15.001590610 +0530
--- Modify: 2022-07-06 12:50:24.548048494 +0530
+-- Modify: 2022-07-06 13:43:40.004530908 +0530
 --[[
 
      Awesome WM configuration template
@@ -843,7 +843,7 @@ awful.rules.rules = {
       properties = {tag = "Games" } },
 
     -- Open Misc on Misc tag
-    { rule_any = { name = { "Bitwarden", "Zotero", "YouTube Music", "Kindle" } },
+    { rule_any = { name = { "Bitwarden", "Zotero", "YouTube Music", "Kindle", "Google Podcasts" } },
       properties = {tag = "Misc" } },
 }
 
