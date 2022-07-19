@@ -1,5 +1,5 @@
 -- Birth: 2022-05-31 22:22:15.001590610 +0530
--- Modify: 2022-07-15 00:12:20.696892931 +0530
+-- Modify: 2022-07-19 15:40:54.525569803 +0530
 --[[
 
      Awesome WM configuration template
@@ -327,6 +327,13 @@ globalkeys = mytable.join(
                   awful.util.spawn("/home/workboots/bin/custom_lock")
               end,
               {description = "lock screen", group = "hotkeys"}
+              ),
+    -- X screen locker suspend
+    awful.key({ altkey, "Control" }, "s",
+              function () 
+                  awful.util.spawn("/home/workboots/bin/custom_lock & systemctl suspend")
+              end,
+              {description = "lock screen and suspend", group = "hotkeys"}
               ),
 
     -- Show help
@@ -934,3 +941,6 @@ awful.util.spawn("picom --experimental-backends")
 
 --ActivityWatch
 awful.util.spawn("/home/workboots/opt/activitywatch/aw-qt")
+
+--XAutolock
+awful.util.spawn("xautolock -time 5 -locker /home/workboots/bin/custom_lock &")
