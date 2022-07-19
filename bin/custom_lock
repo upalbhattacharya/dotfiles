@@ -48,4 +48,4 @@ i3lock \
     --ignore-empty-password \
     --pass-media-keys \
     --pass-screen-keys \
-    --clock
+    --clock & systemctl suspend
