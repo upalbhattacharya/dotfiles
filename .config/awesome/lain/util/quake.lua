@@ -139,22 +139,22 @@ end
 function quake.new(conf)
     conf = conf or {}
 
-    conf.app        = conf.app       or "xterm"    -- application to spawn
-    conf.name       = conf.name      or "QuakeDD"  -- window name
+    conf.app        = conf.app       or "urxvtc"    -- application to spawn
+    conf.name       = conf.name      or "scratch"  -- window name
     conf.argname    = conf.argname   or "-name %s" -- how to specify window name
     conf.extra      = conf.extra     or ""         -- extra arguments
     conf.border     = conf.border    or 1          -- client border width
     conf.visible    = conf.visible   or false      -- initially not visible
-    conf.followtag  = conf.followtag or false      -- spawn on currently focused screen
+    conf.followtag  = conf.followtag or true       -- spawn on currently focused screen
     conf.overlap    = conf.overlap   or false      -- overlap wibox
     conf.screen     = conf.screen    or awful.screen.focused()
     conf.settings   = conf.settings
 
     -- If width or height <= 1 this is a proportion of the workspace
-    conf.height     = conf.height    or 0.25       -- height
-    conf.width      = conf.width     or 1          -- width
-    conf.vert       = conf.vert      or "top"      -- top, bottom or center
-    conf.horiz      = conf.horiz     or "left"     -- left, right or center
+    conf.height     = conf.height    or 0.80       -- height
+    conf.width      = conf.width     or 0.80       -- width
+    conf.vert       = conf.vert      or "center"   -- top, bottom or center
+    conf.horiz      = conf.horiz     or "center"   -- left, right or center
     conf.geometry   = {}                           -- internal use
 
     conf.maximized = false
