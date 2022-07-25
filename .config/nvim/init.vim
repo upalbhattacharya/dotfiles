@@ -150,6 +150,9 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
+" Set tab name to show only filename
+set guitablabel=%t
+
 " Setting auto indentation
 set autoindent
 
