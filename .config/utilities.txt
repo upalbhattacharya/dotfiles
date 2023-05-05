@@ -1,0 +1,14 @@
+neovim-nightly
+awesomewm
+alacritty
+htop
+neofetch
+pcmanfm
+tmux
+picom
+rofi
+pulsemixer
+zotero
+okular
+rclone
+rsync
