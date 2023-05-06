@@ -41,6 +41,6 @@ autocmd('BufWritePre', {
 augroup('setLineLength', { clear = true })
 autocmd('Filetype', {
   group = 'setLineLength',
-  pattern = { 'text', 'markdown', 'html', 'xhtml', 'javascript', 'typescript', 'shell'},
+  pattern = { 'text', 'markdown', 'html', 'xhtml', 'javascript', 'typescript', 'shell', 'sh'},
   command = 'setlocal textwidth=0 colorcolumn=0'
 })

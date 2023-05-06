@@ -110,4 +110,8 @@ alias listinstalled="grep -i installed /var/log/pacman.log"
 alias config="/usr/bin/git --git-dir=$HOME/Repos/dotfiles --work-tree=$HOME"
 alias listuserinstalled="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 
+# vi mode
+bindkey -v
+
+
 tmux ls
