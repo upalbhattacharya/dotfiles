@@ -31,10 +31,10 @@ theme.nord15 = "#B48EAD"
 
 
 theme.fg_focus                                  = theme.nord0
-theme.fg_normal                                 = theme.nord9
+theme.fg_normal                                 = theme.nord4
 theme.fg_urgent                                 = theme.fg_focus
 theme.bg_normal                                 = theme.nord0
-theme.bg_focus                                  = theme.nord8
+theme.bg_focus                                  = theme.nord14
 theme.bg_urgent                                 = theme.nord12
 theme.border_width                              =  dpi(2)
 theme.border_normal                             = theme.bg_normal
@@ -50,7 +50,7 @@ theme.titlebar_fg_focus                         = theme.tasklist_fg_focus
 theme.menu_height                               = dpi(16)
 theme.menu_width                                = dpi(140)
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
-theme.taglist_bg_occupied                       = theme.nord14
+theme.taglist_bg_occupied                       = theme.nord3
 theme.taglist_fg_occupied                       = theme.nord0
 theme.layout_tile                               = theme.dir .. "/icons/tile.png"
 theme.layout_tileleft                           = theme.dir .. "/icons/tileleft.png"
@@ -113,7 +113,7 @@ local keyboardlayout = awful.widget.keyboardlayout:new()
 local clock = awful.widget.watch(
     "date +'%a %d %b %R'", 60,
     function(widget, stdout)
-        widget:set_markup(markup.fontfg(theme.font, theme.nord0, " ".. stdout))
+        widget:set_markup(markup.fontfg(theme.font, theme.nord0, " " .. stdout ))
     end
 )
 
@@ -301,7 +301,42 @@ function theme.at_screen_connect(s)
   }
 
     -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
+    s.mytasklist = awful.widget.tasklist {
+              screen  = s,
+      filter  = awful.widget.tasklist.filter.currenttags,
+      style   = {
+          shape = gears.shape.powerline
+      },
+      layout   = {
+          spacing = 0,
+          spacing_widget = {
+              color  = theme.bg_normal,
+              shape  = gears.shape.powerline,
+              widget = wibox.widget.separator,
+          },
+      layout  = wibox.layout.flex.horizontal,
+          -- max_widget_width = taglist_width /50
+      },
+      widget_template = {
+          {
+              {
+                  {
+                      id     = 'text_role',
+                      widget = wibox.widget.textbox,
+                  },
+
+                  layout = wibox.layout.flex.horizontal,
+              },
+              left  = 30,
+              right = 4,
+              widget = wibox.container.margin,
+          },
+          id     = 'background_role',
+          widget = wibox.container.background,
+      },
+      buttons = awful.util.tasklist_buttons
+  }
+
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(28), bg = theme.bg_normal })
@@ -319,6 +354,7 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            separators.arrow_left("alpha", theme.nord0),
             wibox.widget.systray(),
             separators.arrow_left("alpha", theme.nord8),
             volume,
@@ -334,6 +370,7 @@ function theme.at_screen_connect(s)
             net,
             separators.arrow_left(theme.nord13, theme.nord14),
             clock,
+            wibox.container.background(wibox.widget.textbox(' '), theme.nord14),
             separators.arrow_left(theme.nord14, theme.nord15),
             wibox.container.background(s.mylayoutbox, theme.nord15),
         },
