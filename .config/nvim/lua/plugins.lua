@@ -3,6 +3,7 @@ return require('packer').startup(function()
 
 -- Themes and Customization
     use 'Mofiqul/dracula.nvim'
+    use "EdenEast/nightfox.nvim"
     use 'nvim-tree/nvim-web-devicons'
     use {
       'nvim-lualine/lualine.nvim',

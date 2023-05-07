@@ -109,7 +109,7 @@ local editor       = os.getenv("EDITOR") or "nvim"
 local browser      = "firefox"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "Notes", "Web", "Comms", "Org", "Dev", "Games", "Misc" }
+awful.util.tagnames = { "   ", "   ", " 󰖟  ", "   " }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
@@ -173,7 +173,7 @@ awful.util.tasklist_buttons = mytable.join(
      awful.button({ }, 5, function() awful.client.focus.byidx(-1) end)
 )
 
-beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "powerarrow-dracula"))
+beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "nord"))
 beautiful.useless_gap = 8
 -- beautiful.gap_single_client = false
 beautiful.border_width = 6
@@ -847,31 +847,20 @@ awful.rules.rules = {
     --
     -- Open browsers on Web tag
     { rule_any = { name =  { "Firefox", "Brave", "Vivaldi" } },
-      properties = { tag = "Web"} },
+      properties = { tag = " 󰖟  "} },
 
     -- Open terminal on Dev tag
     { rule = { class = "Alacritty" },
-      properties = { tag = "Dev" } },
+      properties = { tag = "   " } },
 
     -- Open note-taking apps on Notes tag
-    { rule_any = { name = { "Obsidian", "Logseq", "Anki", "Okular" } },
-      properties = { tag = "Notes" } },
+    { rule_any = { name = { "Obsidian", "Logseq", "Anki" } },
+      properties = { tag = "   " } },
 
-    -- Open Communications apps on Comms tag
-    { rule_any = { name = {"Mailspring",  "Telegram Web", "WhatsApp" } },
-      properties = { tag = "Comms", floating=false, maximized=true } },
-
-    -- Open Organization apps on Org tag
-    { rule_any = { name = {"ClickUp", "Google Calendar", "Todoist", "Habitify", "Toggl Track", "ActivityWatch", "Morgen" } },
-      properties = { tag = "Org", floating=false, maximized=true } },
-
-    -- Open Gaming apps on Games tag
-    { rule = { name = "Steam" },
-      properties = {tag = "Games" } },
 
     -- Open Misc on Misc tag
-    { rule_any = { name = { "Bitwarden", "Zotero", "YouTube Music", "Kindle", "Google Podcasts", "Tandoor Recipes", "wallet-web", "OBS" } },
-      properties = {tag = "Misc" } },
+    { rule_any = { name = { "Bitwarden", "Zotero" } },
+      properties = {tag = "   " } },
 }
 
 -- }}}

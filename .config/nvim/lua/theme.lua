@@ -1,6 +1,6 @@
 -- Themes
 
-local dracula = require("dracula")
+-- local dracula = require("dracula")
 local lualine = require("lualine")
 local alpha = require("alpha")
 local startify = require("alpha.themes.startify")
@@ -8,20 +8,24 @@ local colorizer = require("colorizer")
 
 -- Dracula
 -- Customized for transparent background
-dracula.setup({
-  -- show the '~' characters after the end of buffers
-  show_end_of_buffer = true, -- default false
-  -- use transparent background
-  transparent_bg = true, -- default false
-})
+-- dracula.setup({
+--   -- show the '~' characters after the end of buffers
+--   show_end_of_buffer = true, -- default false
+--   -- use transparent background
+--   transparent_bg = true, -- default false
+-- })
+--
+vim.cmd [[colorscheme nordfox]]
+vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
 
-vim.cmd [[colorscheme dracula]]
-
+-- Make NvimTree transparent in tmux
+vim.cmd [[ hi NvimTreeNormal guibg=NONE ctermbg=NONE ]]
+vim.cmd [[ hi NormalNC guibg=NONE ctermbg=NONE ]]
 -- Lualine
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'dracula-nvim',
+    theme = 'nordfox',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
