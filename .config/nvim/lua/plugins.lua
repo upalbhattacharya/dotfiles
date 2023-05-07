@@ -24,6 +24,7 @@ return require('packer').startup(function()
       requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'simrat39/symbols-outline.nvim'
+    use 'nanozuki/tabby.nvim'
 
 -- LSP-related
     use 'williamboman/mason.nvim'

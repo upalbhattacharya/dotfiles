@@ -78,3 +78,51 @@ alpha.setup(startify.opts)
 
 -- Colorizer
 colorizer.setup()
+
+-- tabby.nvim
+
+local theme = {
+  -- fill = 'TabLineFill',
+  fill = {fg = "#D8DEE9", bg="#3B4252"},
+  -- head = 'TabLine',
+  head = {fg = "#2E3440", bg="#B48EAD"},
+  -- current_tab = 'TabLineSel',
+  current_tab = { fg = "#2E3440", bg = "#A3BE8C"},
+  -- tab = 'TabLine',
+  tab = {fg = "#D8DEE9", bg="#4C566A"},
+  -- win = 'TabLine',
+  win = {fg = "#2E3440", bg="#A3BE8C"},
+  -- tail = 'TabLine',
+  tail = {fg = "#2E3440", bg="#B48EAD"},
+}
+require('tabby.tabline').set(function(line)
+  return {
+    {
+      { '  ', hl = theme.head },
+      line.sep('', theme.head, theme.fill),
+    },
+    line.tabs().foreach(function(tab)
+      local hl = tab.is_current() and theme.current_tab or theme.tab
+      return {
+        line.sep('', theme.fill, hl),
+        tab.is_current() and '' or '',
+        tab.number(),
+        tab.name(),
+        -- tab.close_btn(''),
+        line.sep('', hl, theme.fill),
+        hl = hl,
+        margin = ' ',
+      }
+    end),
+    line.spacer(),
+    line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+      return {
+        line.sep('', theme.fill, theme.win),
+        win.is_current() and '' or '',
+        win.buf_name()  .. ' ',
+        hl = theme.win,
+        margin = ' ',
+      }
+    end),
+  }
+end)
