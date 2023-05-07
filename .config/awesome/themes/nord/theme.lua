@@ -356,6 +356,7 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             separators.arrow_left("alpha", theme.nord0),
             wibox.widget.systray(),
+            wibox.widget.textbox(' '),
             separators.arrow_left("alpha", theme.nord8),
             volume,
             separators.arrow_left(theme.nord8, theme.nord9),
