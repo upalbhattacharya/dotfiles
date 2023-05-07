@@ -23,3 +23,6 @@ vim.keymap.set('n', '<leader>xx', '<CMD>TroubleToggle<CR>', {})
 
 -- nvim.tree
 vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeToggle<CR>', {})
+
+-- formatting
+vim.keymap.set('n', '<localleader>f', '<CMD>lua vim.lsp.buf.format()<CR>', {})
