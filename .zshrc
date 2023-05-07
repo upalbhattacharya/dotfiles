@@ -4,6 +4,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -112,6 +113,5 @@ alias listuserinstalled="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g 
 
 # vi mode
 bindkey -v
-
 
 tmux ls
