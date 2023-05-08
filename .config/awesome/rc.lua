@@ -868,7 +868,7 @@ awful.rules.rules = {
 	--
 	-- Open browsers on Web tag
 	{
-		rule_any = { name = { "Firefox", "Brave", "Vivaldi" } },
+		rule_any = { name = { "Firefox", "Brave", "Vivaldi", "Thunderbird" } },
 		properties = { tag = " 󰖟  " },
 	},
 
