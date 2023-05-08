@@ -107,6 +107,7 @@ local vi_focus     = false -- vi-like client focus https://github.com/lcpz/aweso
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "nvim"
 local browser      = "vivaldi-stable"
+local notes        = "obsidian"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "   ", "   ", " 󰖟  ", "   " }
@@ -602,6 +603,9 @@ globalkeys = mytable.join(
 
     -- User programs
     awful.key({ modkey }, "q", function () awful.spawn(browser) end,
+              {description = "run browser", group = "launcher"}),
+
+    awful.key({ modkey, altkey }, "o", function () awful.spawn(notes) end,
               {description = "run browser", group = "launcher"}),
 
     -- Default
