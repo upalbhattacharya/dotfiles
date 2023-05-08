@@ -7,6 +7,7 @@ Configuration files for arch-omen-workboots. The configs for the following are g
 - [picom](.config/picom)
 - [rofi](.config/rofi)
 - [tmux](.tmux.conf)
+- [Xresources](.Xresources)
 - [zsh](.zshrc)
 
 ![](Pictures/Showcase/arch_nord.png)
