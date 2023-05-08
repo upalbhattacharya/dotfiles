@@ -353,7 +353,7 @@ globalkeys = mytable.join(
 
 	-- X screen locker
 	awful.key({ altkey, "Control" }, "l", function()
-		awful.util.spawn("betterlockscreen -l")
+		awful.util.spawn("betterlockscreen -l -w ")
 	end, { description = "lock screen", group = "hotkeys" }),
 	-- X screen locker suspend
 	awful.key({ altkey, "Control" }, "s", function()
@@ -980,9 +980,6 @@ awful.util.spawn("xrdb ~/.Xresources")
 
 -- Picom
 awful.util.spawn("picom -b")
-
---XAutolock
-awful.util.spawn("xautolock -time 5 -locker /home/workboots/bin/custom_lock &")
 
 -- Autolock
 awful.util.spawn("/home/workboots/.config/awesome/locker.sh")
