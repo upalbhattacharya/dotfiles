@@ -11,5 +11,6 @@ pulsemixer
 rclone
 rofi
 rsync
+thunderbird
 tmux
 zotero
