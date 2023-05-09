@@ -1,8 +1,16 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-exec xautolock -detectsleep \
-    -time 5 -locker "betterlockscreen -l -w" \
-    -notify 30 \
-    -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
-
-
+# Run xidlehook
+xidlehook \
+    --detect-sleep \
+    --not-when-fullscreen \
+    --not-when-audio \
+    --timer 270 \
+    'notify-send "Lockscreen" "System will enable lockscreen in 30 seconds" ' \
+    '' \
+    --timer 30 \
+    'betterlockscreen --lock' \
+    '' \
+    --timer 300 \
+    'systemctl suspend' \
+    ''
