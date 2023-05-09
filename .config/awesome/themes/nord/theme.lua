@@ -8,7 +8,7 @@ local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
-theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dracula"
+theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/nord"
 theme.wallpaper                                 ="/home/workboots/Pictures/Wallpapers/NASA/nasa_himalayas.jpg"
 theme.font                                      = "Inconsolata Nerd Font Mono 22"
 
@@ -173,7 +173,7 @@ temp = wibox.widget({
 })
 
 -- / fs
-local fsicon = wibox.widget.imagebox(theme.widget_hdd)
+-- local fsicon = wibox.widget.imagebox(theme.widget_hdd)
 --[[ commented because it needs Gio/Glib >= 2.54
 theme.fs = lain.widget.fs({
     notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Terminus 10" },

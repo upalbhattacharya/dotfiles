@@ -7,7 +7,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # merge in defaults and keymaps
 
-xrandr --setprovideroutputsource modesetting NVIDIA-0
+# xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
 if [ -f $sysresources ]; then

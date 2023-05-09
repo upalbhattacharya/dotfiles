@@ -973,7 +973,7 @@ end)
 -- }}}
 
 -- xrandr
-awful.util.spawn("xrandr --output HDMI-0 --auto --scale 1.3334x1.3334 --right-of eDP-1-1")
+-- awful.util.spawn("xrandr --output HDMI-0 --auto --scale 1.3334x1.3334 --right-of eDP-1-1")
 
 -- Xresources
 awful.util.spawn("xrdb ~/.Xresources")
