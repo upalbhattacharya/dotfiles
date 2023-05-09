@@ -111,6 +111,7 @@ alias listinstalled="grep -i installed /var/log/pacman.log"
 alias config="/usr/bin/git --git-dir=$HOME/Repos/dotfiles --work-tree=$HOME"
 alias listuserinstalled="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias setmonitors="xrandr --output HDMI-0 --auto --scale 1.3334x1.3334 --right-of eDP-1-1"
+alias optimusswitchnvidia="/home/workboots/Utilities/optimus_switch_nvidia.sh"
 
 # vi mode
 bindkey -v
