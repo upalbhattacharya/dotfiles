@@ -26,6 +26,7 @@ nano
 neofetch
 netextender
 network-manager-applet
+noto-fonts-emoji
 npm
 ntfs-3g
 nvidia
@@ -53,6 +54,7 @@ rofi
 rsync
 tmux
 ttf-inconsolata-nerd
+ttf-iosevka-nerd
 unzip
 vim
 vivaldi-ffmpeg-codecs

@@ -353,7 +353,7 @@ globalkeys = mytable.join(
 	--
 	-- X screen locker
 	awful.key({ altkey, "Control" }, "l", function()
-		awful.util.spawn("betterlockscreen -l -w ")
+		awful.util.spawn("betterlockscreen -l ")
 	end, { description = "lock screen", group = "hotkeys" }),
 	-- X screen locker suspend
 	awful.key({ altkey, "Control" }, "s", function()
