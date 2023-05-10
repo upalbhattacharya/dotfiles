@@ -15,11 +15,13 @@ dialog
 dkms
 efibootmgr
 flameshot
+gnome-keyring
 grub
 htop
 linux-firmware
 linux-headers
 lua
+mailspring
 mtools
 multi-git-status
 nano
@@ -61,9 +63,9 @@ vivaldi-ffmpeg-codecs
 vivaldi-update-ffmpeg-hook
 wget
 wireless_tools
-xautolock
 xclip
 xf86-video-vesa
+xidlehook
 xorg-bdftopcf
 xorg-docs
 xorg-fonts-100dpi
@@ -98,6 +100,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xprintidle
 yay
 zip
 zotero
