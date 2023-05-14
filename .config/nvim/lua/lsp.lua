@@ -87,6 +87,9 @@ lspconfig.bashls.setup({
 lspconfig.marksman.setup({
 	capabilities = capabilities,
 })
+lspconfig.yamlls.setup({
+	capabilities = capabilities,
+})
 
 null_ls.setup({
 	sources = {
@@ -95,9 +98,10 @@ null_ls.setup({
 		}),
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.markdownlint.with({
+		null_ls.builtins.diagnostics.markdownlint.with({
             extra_args = { "--line-length", "79" },
-        })
+        }),
+        null_ls.builtins.diagnostics.yamllint
 	},
 })
 
