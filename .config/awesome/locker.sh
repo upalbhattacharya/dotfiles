@@ -12,5 +12,5 @@ xidlehook \
     'betterlockscreen --lock' \
     '' \
     --timer 300 \
-    'systemctl suspend-then-hibernate' \
+    'systemctl suspend' \
     ''

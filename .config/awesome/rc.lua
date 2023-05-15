@@ -356,9 +356,9 @@ globalkeys = mytable.join(
 		awful.util.spawn("betterlockscreen -l ")
 	end, { description = "lock screen", group = "hotkeys" }),
 	-- X screen locker suspend
-	awful.key({ altkey, "Control" }, "s", function()
-		awful.util.spawn("/home/workboots/bin/custom_lock & systemctl suspend-then-hibernate")
-	end, { description = "lock screen and suspend", group = "hotkeys" }),
+	-- awful.key({ altkey, "Control" }, "s", function()
+	-- 	awful.util.spawn("/home/workboots/bin/custom_lock & systemctl suspend-then-hibernate")
+	-- end, { description = "lock screen and suspend", group = "hotkeys" }),
 
 	-- Show help
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
