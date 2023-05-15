@@ -357,7 +357,7 @@ globalkeys = mytable.join(
 	end, { description = "lock screen", group = "hotkeys" }),
 	-- X screen locker suspend
 	awful.key({ altkey, "Control" }, "s", function()
-		awful.util.spawn("/home/workboots/bin/custom_lock & systemctl suspend")
+		awful.util.spawn("/home/workboots/bin/custom_lock & systemctl suspend-then-hibernate")
 	end, { description = "lock screen and suspend", group = "hotkeys" }),
 
 	-- Show help
@@ -564,33 +564,25 @@ globalkeys = mytable.join(
 		beautiful.volume.update()
 	end, { description = "volume 0%", group = "hotkeys" }),
 
-    -- Alternative Volume controls
+	-- Alternative Volume controls
 
-	awful.key({ altkey }, "Up",
-	    function ()
-	        os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
-	        beautiful.volume.update()
-	    end,
-	    {description = "volume up", group = "hotkeys"}),
-	awful.key({ altkey }, "Down",
-	    function ()
-	        os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
-	        beautiful.volume.update()
-	    end,
-	    {description = "volume down", group = "hotkeys"}),
-	awful.key({ altkey }, "m",
-	function ()
-	os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-	beautiful.volume.update()
-	end,
-	{description = "toggle mute", group = "hotkeys"}),
+	awful.key({ altkey }, "Up", function()
+		os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+		beautiful.volume.update()
+	end, { description = "volume up", group = "hotkeys" }),
+	awful.key({ altkey }, "Down", function()
+		os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+		beautiful.volume.update()
+	end, { description = "volume down", group = "hotkeys" }),
+	awful.key({ altkey }, "m", function()
+		os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+		beautiful.volume.update()
+	end, { description = "toggle mute", group = "hotkeys" }),
 
-	awful.key({ altkey, "Control" }, "m",
-	    function ()
-	        os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
-	        beautiful.volume.update()
-	    end,
-	    {description = "volume 100%", group = "hotkeys"}),
+	awful.key({ altkey, "Control" }, "m", function()
+		os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
+		beautiful.volume.update()
+	end, { description = "volume 100%", group = "hotkeys" }),
 
 	-- MPD control
 	awful.key({ altkey, "Control" }, "Up", function()
