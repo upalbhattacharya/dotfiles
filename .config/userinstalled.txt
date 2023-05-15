@@ -55,6 +55,7 @@ ripgrep
 rofi
 rsync
 tmux
+tree
 ttf-inconsolata-nerd
 ttf-iosevka-nerd
 unzip
