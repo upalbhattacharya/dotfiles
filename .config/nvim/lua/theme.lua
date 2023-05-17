@@ -82,18 +82,13 @@ colorizer.setup()
 -- tabby.nvim
 
 local theme = {
-	-- fill = 'TabLineFill',
 	fill = { fg = "#D8DEE9", bg = "#3B4252" },
-	-- head = 'TabLine',
 	head = { fg = "#2E3440", bg = "#B48EAD" },
-	-- current_tab = 'TabLineSel',
 	current_tab = { fg = "#2E3440", bg = "#A3BE8C" },
-	-- tab = 'TabLine',
 	tab = { fg = "#D8DEE9", bg = "#4C566A" },
-	-- win = 'TabLine',
+	current_win = { fg = "#2E3440", bg = "#EBCB8B" },
 	win = { fg = "#2E3440", bg = "#A3BE8C" },
-	-- tail = 'TabLine',
-	tail = { fg = "#2E3440", bg = "#B48EAD" },
+	tail = { fg = "#2E3440", bg = "#D08770" },
 }
 require("tabby.tabline").set(function(line)
 	return {
@@ -105,7 +100,6 @@ require("tabby.tabline").set(function(line)
 			local hl = tab.is_current() and theme.current_tab or theme.tab
 			return {
 				line.sep("", theme.fill, hl),
-				tab.is_current() and "" or "",
 				tab.number(),
 				tab.name(),
 				-- tab.close_btn(''),
@@ -116,13 +110,19 @@ require("tabby.tabline").set(function(line)
 		end),
 		line.spacer(),
 		line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+			local hl = win.is_current() and theme.current_win or theme.tab
 			return {
-				line.sep("", theme.fill, theme.win),
-				win.is_current() and "" or "",
-				win.buf_name() .. " ",
-				hl = theme.win,
+				line.sep("", hl, theme.fill),
+				win.buf_name(),
+				line.sep("", theme.fill, hl),
+				hl = hl,
 				margin = " ",
 			}
 		end),
+		{
+			line.sep("", theme.tail, theme.fill),
+			{ "  ", hl = theme.tail },
+		},
+		hl = theme.fill,
 	}
 end)
