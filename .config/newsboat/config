@@ -1,0 +1,3 @@
+auto-reload yes
+browser "vivaldi-stable %u"
+datetime-format "%Y-%m-%d"
