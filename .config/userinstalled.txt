@@ -28,6 +28,7 @@ nano
 neofetch
 netextender
 network-manager-applet
+newsboat
 noto-fonts-emoji
 npm
 ntfs-3g
