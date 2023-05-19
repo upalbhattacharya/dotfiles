@@ -111,7 +111,7 @@ local keyboardlayout = awful.widget.keyboardlayout:new()
 
 -- Textclock
 local clock = awful.widget.watch(
-    "date +'%a %d %b %R'", 60,
+    "date +'%a %Y-%m-%d %R'", 60,
     function(widget, stdout)
         widget:set_markup(markup.fontfg(theme.font, theme.nord0, " " .. stdout ))
     end
