@@ -90,6 +90,9 @@ lspconfig.marksman.setup({
 lspconfig.yamlls.setup({
 	capabilities = capabilities,
 })
+lspconfig.html.setup({
+	capabilities = capabilities,
+})
 
 null_ls.setup({
 	sources = {

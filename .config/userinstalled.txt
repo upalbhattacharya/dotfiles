@@ -12,6 +12,7 @@ bluez-utils
 cronie
 cuda-tools
 dialog
+discord
 dkms
 efibootmgr
 flameshot
@@ -59,6 +60,7 @@ tmux
 tree
 ttf-inconsolata-nerd
 ttf-iosevka-nerd
+ttf-opensans
 unzip
 vim
 vivaldi-ffmpeg-codecs
