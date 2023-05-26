@@ -4,7 +4,7 @@ betterlockscreen
 htop
 neofetch
 neovim-nightly
-okular
+sioyek
 pcmanfm
 picom
 pulsemixer
