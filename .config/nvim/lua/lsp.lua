@@ -93,6 +93,9 @@ lspconfig.yamlls.setup({
 lspconfig.html.setup({
 	capabilities = capabilities,
 })
+lspconfig.tsserver.setup({
+	capabilities = capabilities,
+})
 
 null_ls.setup({
 	sources = {
@@ -104,7 +107,8 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.markdownlint.with({
             extra_args = { "--line-length", "79" },
         }),
-        null_ls.builtins.diagnostics.yamllint
+        null_ls.builtins.diagnostics.yamllint,
+        null_ls.builtins.diagnostics.eslint_d
 	},
 })
 
