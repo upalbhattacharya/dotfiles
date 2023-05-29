@@ -14,6 +14,7 @@ cuda-tools
 dialog
 discord
 dkms
+dosfstools
 efibootmgr
 flameshot
 gnome-keyring
@@ -38,13 +39,13 @@ nvidia-settings
 nvim-packer-git
 nvme-cli
 obsidian
-okular
 openvpn-update-resolv-conf-git
 optimus-manager
 os-prober
 pacman-contrib
 pavucontrol
 pcmanfm
+pdfannots-git
 picom
 powertop
 pulseaudio-alsa
@@ -56,6 +57,8 @@ reflector
 ripgrep
 rofi
 rsync
+sioyek
+syncthing
 tmux
 tree
 ttf-inconsolata-nerd
