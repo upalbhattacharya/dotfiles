@@ -108,6 +108,7 @@ local cycle_prev = true -- cycle with only the previously focused client or all 
 local editor = os.getenv("EDITOR") or "nvim"
 local browser = "vivaldi-stable"
 local notes = "obsidian"
+local reference_manager = "zotero"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "   ", "   ", " 󰖟  ", "   " }
@@ -628,7 +629,10 @@ globalkeys = mytable.join(
 	end, { description = "run browser", group = "launcher" }),
 	awful.key({ modkey, altkey }, "o", function()
 		awful.spawn(notes)
-	end, { description = "run browser", group = "launcher" }),
+	end, { description = "run note-taking tool", group = "launcher" }),
+	awful.key({ modkey, altkey }, "z", function()
+		awful.spawn(reference_manager)
+	end, { description = "run reference manager", group = "launcher" }),
 
 	-- Default
 	--[[ Menubar
