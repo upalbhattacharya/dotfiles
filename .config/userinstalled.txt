@@ -9,6 +9,7 @@ base
 base-devel
 betterlockscreen
 bluez-utils
+chromium
 cronie
 cuda-tools
 dialog
@@ -17,6 +18,7 @@ dkms
 dosfstools
 efibootmgr
 flameshot
+fzf
 gnome-keyring
 grub
 htop
@@ -46,6 +48,7 @@ pacman-contrib
 pavucontrol
 pcmanfm
 pdfannots-git
+pdftk
 picom
 powertop
 pulseaudio-alsa
@@ -58,6 +61,7 @@ ripgrep
 rofi
 rsync
 sioyek
+sof-firmware
 syncthing
 tmux
 tree
