@@ -54,16 +54,16 @@ autocmd("BufWinEnter", {
 
 local save_fold = augroup("Persistent Folds", { clear = true })
 autocmd("BufWinLeave", {
-  pattern = "*.*",
-  callback = function()
-    vim.cmd.mkview()
-  end,
-  group = save_fold,
+	pattern = "*.*",
+	callback = function()
+		vim.cmd.mkview()
+	end,
+	group = save_fold,
 })
 autocmd("BufWinEnter", {
-  pattern = "*.*",
-  callback = function()
-    vim.cmd.loadview({ mods = { emsg_silent = true } })
-  end,
-  group = save_fold,
+	pattern = "*.*",
+	callback = function()
+		vim.cmd.loadview({ mods = { emsg_silent = true } })
+	end,
+	group = save_fold,
 })
