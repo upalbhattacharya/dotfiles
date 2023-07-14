@@ -15,6 +15,7 @@ cuda-tools
 dialog
 discord
 dkms
+docker
 dosfstools
 efibootmgr
 flameshot
@@ -55,6 +56,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulsemixer
+python-pipx
 rclone
 reflector
 ripgrep
@@ -63,6 +65,7 @@ rsync
 sioyek
 sof-firmware
 syncthing
+tlp-rdw
 tmux
 tree
 ttf-inconsolata-nerd

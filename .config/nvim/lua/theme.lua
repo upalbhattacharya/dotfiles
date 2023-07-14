@@ -126,3 +126,4 @@ require("tabby.tabline").set(function(line)
 		hl = theme.fill,
 	}
 end)
+

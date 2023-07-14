@@ -1,5 +1,23 @@
-require("symbols-outline").setup()
-
+require("aerial").setup({
+	backends = { "treesitter", "lsp", "markdown", "man" },
+	layout = {
+		min_width = 30,
+		win_opts = {},
+		default_direction = "prefer_right",
+		placement = "edge",
+		resize_to_content = true,
+		preserve_equality = false,
+	},
+	filter_kind = false,
+	manage_folds = true,
+	link_folds_to_tree = true,
+	link_tree_to_folds = true,
+	attach_mode = "global",
+	open_automatic = true,
+	highlight_on_hover = true,
+	show_guides = true,
+	autojump = true,
+})
 require("nvim-treesitter.configs").setup({
 	-- One of "all", "maintained" (parsers with maintainers), or a list of languages
 	ensure_installed = "python",
@@ -34,3 +52,5 @@ require("indent_blankline").setup({
 })
 require("nvim-tree").setup()
 require("leap").add_default_mappings()
+require("diffview").setup()
+require("telescope").setup()

@@ -11,12 +11,15 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set("n", "<leader>fz", builtin.current_buffer_fuzzy_find, {})
+vim.keymap.set("n", "<leader>ft", builtin.treesitter, {})
 
 -- hop
 vim.keymap.set("", "<leader>w", "<CMD>HopPattern<CR>", { remap = true })
 
--- Symbols Outline
-vim.keymap.set("n", "<leader>si", "<CMD>SymbolsOutline<CR>", {})
+-- aerial.nvim
+vim.keymap.set("n", "<leader>si", "<CMD>AerialToggle<CR>", {})
+vim.keymap.set("n", "<leader>sf", "<CMD>AerialNavToggle<CR>", {})
 
 -- Trouble
 vim.keymap.set("n", "<leader>xx", "<CMD>TroubleToggle<CR>", {})
@@ -29,3 +32,10 @@ vim.keymap.set("n", "<localleader>f", "<CMD>lua vim.lsp.buf.format()<CR>", {})
 
 -- neogen annotation/documentation
 vim.keymap.set("n", "<leader>nf", "<CMD>lua require('neogen').generate()<CR>", {})
+
+-- buffernavigation
+vim.keymap.set("n", "gb", "<CMD>bnext<CR>", {})
+vim.keymap.set("n", "gB", "<CMD>bprev<CR>", {})
+
+-- UndoTree
+vim.keymap.set('n', '<leader>fu', vim.cmd.UndotreeToggle)

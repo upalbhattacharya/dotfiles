@@ -22,9 +22,9 @@ return require("packer").startup(function()
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		requires = { "nvim-lua/plenary.nvim" },
 	})
-	use("simrat39/symbols-outline.nvim")
+	use("stevearc/aerial.nvim")
 	use("nanozuki/tabby.nvim")
 
 	-- LSP-related
@@ -44,6 +44,7 @@ return require("packer").startup(function()
 		"danymat/neogen",
 		requires = "nvim-treesitter/nvim-treesitter",
 	})
+	use("mbbill/undotree")
 	-- LuaSnip
 	use({
 		"L3MON4D3/LuaSnip",
@@ -62,4 +63,5 @@ return require("packer").startup(function()
 	use("nvim-tree/nvim-tree.lua")
 	-- fugitive.nvim
 	use("tpope/vim-fugitive")
+	use("sindrets/diffview.nvim")
 end)
