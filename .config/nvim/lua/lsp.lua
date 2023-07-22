@@ -73,7 +73,7 @@ lspconfig.pylsp.setup({
 	capabilities = capabilities,
 })
 lspconfig.yamlls.setup({
-	capabilities = capabilities,
+	capabilities = capabilites,
 })
 lspconfig.lua_ls.setup({
 	capabilities = capabilities,
@@ -85,9 +85,6 @@ lspconfig.bashls.setup({
 	capabilities = capabilities,
 })
 lspconfig.marksman.setup({
-	capabilities = capabilities,
-})
-lspconfig.yamlls.setup({
 	capabilities = capabilities,
 })
 lspconfig.html.setup({
@@ -104,11 +101,12 @@ null_ls.setup({
 		}),
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.yamlfmt,
 		null_ls.builtins.diagnostics.markdownlint.with({
-            extra_args = { "--line-length", "79" },
-        }),
-        null_ls.builtins.diagnostics.yamllint,
-        null_ls.builtins.diagnostics.eslint_d
+			extra_args = { "--line-length", "79" },
+		}),
+		null_ls.builtins.diagnostics.yamllint,
+		null_ls.builtins.diagnostics.eslint_d,
 	},
 })
 
