@@ -64,4 +64,7 @@ return require("packer").startup(function()
 	-- fugitive.nvim
 	use("tpope/vim-fugitive")
 	use("sindrets/diffview.nvim")
+	-- mini.map
+	use({ "echasnovski/mini.map", branch = "stable" })
+	use("lewis6991/gitsigns.nvim")
 end)

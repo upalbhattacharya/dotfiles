@@ -54,3 +54,23 @@ require("nvim-tree").setup()
 require("leap").add_default_mappings()
 require("diffview").setup()
 require("telescope").setup()
+require("gitsigns").setup()
+
+local map = require("mini.map")
+
+map.setup({
+	integrations = {
+		map.gen_integration.diagnostic(),
+		map.gen_integration.gitsigns(),
+		map.gen_integration.builtin_search(),
+	},
+	symbols = {
+		encode = map.gen_encode_symbols.block("3x2"),
+		scroll_view = "",
+	},
+	window = {
+		show_integration_count = false,
+		width = 35,
+		winblend = 0,
+	},
+})
