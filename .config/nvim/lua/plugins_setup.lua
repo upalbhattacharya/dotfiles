@@ -54,6 +54,7 @@ require("nvim-tree").setup()
 require("leap").add_default_mappings()
 require("diffview").setup()
 require("telescope").setup()
+require("telescope").load_extension "file_browser"
 require("gitsigns").setup()
 
 local map = require("mini.map")

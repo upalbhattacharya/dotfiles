@@ -14,6 +14,9 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>fz", builtin.current_buffer_fuzzy_find, {})
 vim.keymap.set("n", "<leader>ft", builtin.treesitter, {})
 
+-- Telescope file-browser
+vim.keymap.set("n", "<leader>fs", ":Telescope file_browser<CR>", { noremap = true })
+
 -- hop
 vim.keymap.set("", "<leader>w", "<CMD>HopPattern<CR>", { remap = true })
 
@@ -38,12 +41,12 @@ vim.keymap.set("n", "gb", "<CMD>bnext<CR>", {})
 vim.keymap.set("n", "gB", "<CMD>bprev<CR>", {})
 
 -- UndoTree
-vim.keymap.set('n', '<leader>fu', vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>fu", vim.cmd.UndotreeToggle)
 
 -- mini.map
-vim.keymap.set('n', '<Leader>mc', MiniMap.close)
-vim.keymap.set('n', '<Leader>mf', MiniMap.toggle_focus)
-vim.keymap.set('n', '<Leader>mo', MiniMap.open)
-vim.keymap.set('n', '<Leader>mr', MiniMap.refresh)
-vim.keymap.set('n', '<Leader>ms', MiniMap.toggle_side)
-vim.keymap.set('n', '<Leader>mt', MiniMap.toggle)
+vim.keymap.set("n", "<Leader>mc", MiniMap.close)
+vim.keymap.set("n", "<Leader>mf", MiniMap.toggle_focus)
+vim.keymap.set("n", "<Leader>mo", MiniMap.open)
+vim.keymap.set("n", "<Leader>mr", MiniMap.refresh)
+vim.keymap.set("n", "<Leader>ms", MiniMap.toggle_side)
+vim.keymap.set("n", "<Leader>mt", MiniMap.toggle)

@@ -24,6 +24,10 @@ return require("packer").startup(function()
 		tag = "0.1.1",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	})
 	use("stevearc/aerial.nvim")
 	use("nanozuki/tabby.nvim")
 
