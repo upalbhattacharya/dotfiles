@@ -1,0 +1,9 @@
+/home/workboots/Documents
+/home/workboots/Music
+/home/workboots/Pictures
+/home/workboots/Utilities
+/home/workboots/Vaults
+/home/workboots/Videos
+/home/workboots/VPN
+/home/workboots/Zotero
+

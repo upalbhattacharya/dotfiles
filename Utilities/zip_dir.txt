@@ -1,0 +1,8 @@
+/home/workboots/Datasets/DHC    /mnt/media/backups/zip_based/Datasets/DHC.zip
+/home/workboots/Datasets/SC_50k     /mnt/media/backups/zip_based/Datasets/SC_50k.zip
+/home/workboots/Datasets/SC    /mnt/media/backups/zip_based/Datasets/SC.zip
+/home/workboots/Datasets/LLPE /mnt/media/backups/zip_based/Datasets/LLPE.zip
+/home/workboots/Datasets/jigsaw-toxic-comment-classification /mnt/media/backups/zip_based/Datasets/jigsaw-toxic-comment-classification.zip
+/home/workboots/Datasets/squad-2.0 /mnt/media/backups/zip_based/Datasets/squad-2.0.zip
+/home/workboots/Datasets/IndiaCode  /mnt/media/backups/zip_based/Datasets/IndiaCode.zip
+/home/workboots/Projects/indian-advocate-recommendation /mnt/media/backups/zip_based/Projects/indian-advocate-recommendation.zip

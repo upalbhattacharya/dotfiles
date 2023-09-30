@@ -71,4 +71,8 @@ return require("packer").startup(function()
 	-- mini.map
 	use({ "echasnovski/mini.map", branch = "stable" })
 	use("lewis6991/gitsigns.nvim")
+	-- which-key
+	use("folke/which-key.nvim")
+	--hardtime.nvim
+	use("m4xshen/hardtime.nvim")
 end)

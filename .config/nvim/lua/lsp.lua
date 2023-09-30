@@ -81,7 +81,7 @@ lspconfig.lua_ls.setup({
 lspconfig.jsonls.setup({
 	capabilities = capabilities,
 })
-lspconfig.bashls.setup({
+lspconfig.efm.setup({
 	capabilities = capabilities,
 })
 lspconfig.marksman.setup({

@@ -20,13 +20,15 @@ require("aerial").setup({
 })
 require("nvim-treesitter.configs").setup({
 	-- One of "all", "maintained" (parsers with maintainers), or a list of languages
-	ensure_installed = "python",
-	"c++",
-	"markdown",
-	"lua",
-	"vim",
-	"javascript",
-	"yaml",
+	ensure_installed = {
+		"python",
+		"markdown",
+		"lua",
+		"vim",
+		"javascript",
+		"yaml",
+		"bash",
+	},
 
 	-- Install languages synchronously (only applied to `ensure_installed`)
 	sync_install = true,
@@ -54,9 +56,9 @@ require("nvim-tree").setup()
 require("leap").add_default_mappings()
 require("diffview").setup()
 require("telescope").setup()
-require("telescope").load_extension "file_browser"
+require("telescope").load_extension("file_browser")
 require("gitsigns").setup()
-
+require("hardtime").setup()
 local map = require("mini.map")
 
 map.setup({
@@ -75,3 +77,5 @@ map.setup({
 		winblend = 0,
 	},
 })
+
+require("which-key").setup()
