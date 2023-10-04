@@ -75,4 +75,6 @@ return require("packer").startup(function()
 	use("folke/which-key.nvim")
 	--hardtime.nvim
 	use("m4xshen/hardtime.nvim")
+	-- nvim-surround
+	use("kylechui/nvim-surround")
 end)

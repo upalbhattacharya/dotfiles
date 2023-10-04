@@ -79,3 +79,5 @@ map.setup({
 })
 
 require("which-key").setup()
+
+require("nvim-surround").setup()
