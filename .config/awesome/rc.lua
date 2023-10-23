@@ -107,7 +107,7 @@ local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-c
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = os.getenv("EDITOR") or "nvim"
 local browser = "vivaldi-stable"
-local notes = "obsidian"
+local notes = "source /home/workboots/Utilities/sync_start_obsidian.sh"
 local reference_manager = "zotero"
 
 awful.util.terminal = terminal
@@ -189,7 +189,8 @@ awful.util.tasklist_buttons = mytable.join(
 	end)
 )
 
-beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), "nord"))
+beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua",
+os.getenv("HOME"), "catppuccin"))
 beautiful.useless_gap = 8
 -- beautiful.gap_single_client = false
 beautiful.border_width = 6
@@ -594,14 +595,14 @@ globalkeys = mytable.join(
 		os.execute("mpc stop")
 		beautiful.mpd.update()
 	end, { description = "mpc stop", group = "widgets" }),
-	awful.key({ altkey, "Control" }, "Left", function()
-		os.execute("mpc prev")
-		beautiful.mpd.update()
-	end, { description = "mpc prev", group = "widgets" }),
-	awful.key({ altkey, "Control" }, "Right", function()
-		os.execute("mpc next")
-		beautiful.mpd.update()
-	end, { description = "mpc next", group = "widgets" }),
+	-- awful.key({ altkey, "Control" }, "Left", function()
+	-- 	os.execute("mpc prev")
+	-- 	beautiful.mpd.update()
+	-- end, { description = "mpc prev", group = "widgets" }),
+	-- awful.key({ altkey, "Control" }, "Right", function()
+	-- 	os.execute("mpc next")
+	-- 	beautiful.mpd.update()
+	-- end, { description = "mpc next", group = "widgets" }),
 	awful.key({ altkey }, "0", function()
 		local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
 		if beautiful.mpd.timer.started then
@@ -627,13 +628,12 @@ globalkeys = mytable.join(
 	awful.key({ modkey }, "q", function()
 		awful.spawn(browser)
 	end, { description = "run browser", group = "launcher" }),
-	awful.key({ modkey, altkey }, "o", function()
-		awful.spawn(notes)
-	end, { description = "run note-taking tool", group = "launcher" }),
 	awful.key({ modkey, altkey }, "z", function()
 		awful.spawn(reference_manager)
 	end, { description = "run reference manager", group = "launcher" }),
-
+	awful.key({ modkey, "Shift" }, "o", function()
+		awful.util.spawn("source /home/workboots/Utilities/sync_start_obsidian.sh")
+	end),
 	-- Default
 	--[[ Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,

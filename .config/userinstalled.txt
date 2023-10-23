@@ -1,9 +1,10 @@
 acpi
 acpid
 acpilight
-alacritty
+alacritty-git
 alsa-utils
 amd-ucode
+autotiling
 awesome
 base
 base-devel
@@ -16,6 +17,7 @@ dialog
 discord
 dkms
 docker
+docker-compose
 dosfstools
 efibootmgr
 flameshot
@@ -25,6 +27,8 @@ gnome-keyring
 grub
 htop
 iftop
+inotify-tools
+kitty
 linux-firmware
 linux-headers
 lua
@@ -48,7 +52,6 @@ nvidia-docker2
 nvidia-settings
 nvim-packer-git
 nvme-cli
-obsidian
 okular
 openvpn-update-resolv-conf-git
 optimus-manager
@@ -88,6 +91,7 @@ vivaldi-ffmpeg-codecs
 vivaldi-update-ffmpeg-hook
 vulkan-validation-layers
 waybar
+webkit2gtk
 wget
 wireless_tools
 wofi

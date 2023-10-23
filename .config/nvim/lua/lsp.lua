@@ -94,6 +94,10 @@ lspconfig.tsserver.setup({
 	capabilities = capabilities,
 })
 
+lspconfig.tsserver.setup({
+	capabilities = capabilities,
+})
+
 null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.black.with({
@@ -102,11 +106,26 @@ null_ls.setup({
 		null_ls.builtins.formatting.isort,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.yamlfmt,
+		null_ls.builtins.formatting.prettier.with({
+			filetypes = {
+				"javascript",
+				"typescript",
+				"css",
+				"scss",
+				"html",
+				"json",
+				"yaml",
+				"markdown",
+				"graphql",
+				"md",
+				"txt",
+			},
+		}),
 		null_ls.builtins.diagnostics.markdownlint.with({
 			extra_args = { "--line-length", "79" },
 		}),
 		null_ls.builtins.diagnostics.yamllint,
-		null_ls.builtins.diagnostics.eslint_d,
+		-- null_ls.builtins.diagnostics.eslint_d,
 	},
 })
 

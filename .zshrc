@@ -121,7 +121,19 @@ alias listinstalled="grep -i installed /var/log/pacman.log"
 alias config="/usr/bin/git --git-dir=$HOME/Repos/dotfiles --work-tree=$HOME"
 alias listuserinstalled="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
 alias setdisplays="xrandr --output HDMI-0 --auto --scale 1.3334x1.3334 --right-of eDP-1-1"
-alias optimusswitchnvidia="/home/workboots/Utilities/optimus_switch_nvidia.sh"
+alias obsidian="source /home/workboots/Utilities/sync_start_obsidian.sh"
+alias obsidian_sync="source /home/workboots/Vaults/obsidian_sync"
+alias o_sync="obsidian_sync"
+alias obsidian_diff="cd /home/workboots/Vaults; git remote update; git diff origin/master; cd /home/workboots"
+alias o_diff="obsidian_diff"
+alias obsidian_stat="cd /home/workboots/Vaults; git status; cd /home/workboots"
+alias o_stat="obsidian_stat"
+alias obsidian_log="cd /home/workboots/Vaults; git lg2; cd /home/workboots"
+alias o_log="obsidian_log"
+# alias optimusswitch="f() {sh /home/workboots/Utilities/optimus_switch.sh $1;};f"
+function optimusswitch () {
+    source /home/workboots/Utilities/optimus_switch.sh $1;
+}
 
 # vi mode
 # bindkey -v

@@ -35,13 +35,12 @@ vim.keymap.set("n", "<leader>fs", ":Telescope file_browser<CR>", {
 	desc = "Telescope file browser",
 })
 
-
 -- aerial.nvim
 vim.keymap.set("n", "<leader>ai", "<CMD>AerialToggle<CR>", {
 	desc = "Aerial toggle",
 })
 vim.keymap.set("n", "<leader>af", "<CMD>AerialNavToggle<CR>", {
-desc = "Aerial Fold toggle",
+	desc = "Aerial Fold toggle",
 })
 
 -- Trouble
@@ -55,7 +54,7 @@ vim.keymap.set("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", {
 })
 
 -- formatting
-vim.keymap.set("n", "<localleader>f", "<CMD>lua vim.lsp.buf.format()<CR>", {
+vim.keymap.set("n", "<localleader>f", "<CMD>lua vim.lsp.buf.format({timeout_ms = 3000})<CR>", {
 	desc = "LSP format",
 })
 

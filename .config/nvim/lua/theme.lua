@@ -6,16 +6,7 @@ local alpha = require("alpha")
 local startify = require("alpha.themes.startify")
 local colorizer = require("colorizer")
 
--- Dracula
--- Customized for transparent background
--- dracula.setup({
---   -- show the '~' characters after the end of buffers
---   show_end_of_buffer = true, -- default false
---   -- use transparent background
---   transparent_bg = true, -- default false
--- })
---
-vim.cmd([[colorscheme nordfox]])
+vim.cmd([[colorscheme catppuccin-mocha]])
 vim.cmd([[ hi Normal guibg=NONE ctermbg=NONE ]])
 
 -- Make NvimTree transparent in tmux
@@ -25,7 +16,7 @@ vim.cmd([[ hi NormalNC guibg=NONE ctermbg=NONE ]])
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "nordfox",
+		theme = "catppuccin-mocha",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -82,13 +73,13 @@ colorizer.setup()
 -- tabby.nvim
 
 local theme = {
-	fill = { fg = "#D8DEE9", bg = "#3B4252" },
-	head = { fg = "#2E3440", bg = "#B48EAD" },
-	current_tab = { fg = "#2E3440", bg = "#A3BE8C" },
-	tab = { fg = "#D8DEE9", bg = "#4C566A" },
-	current_win = { fg = "#2E3440", bg = "#EBCB8B" },
-	win = { fg = "#2E3440", bg = "#A3BE8C" },
-	tail = { fg = "#2E3440", bg = "#D08770" },
+	fill = { fg = "#CAD3F5", bg = "#181926" },
+	head = { fg = "#181926", bg = "#F5BDE6" },
+	current_tab = { fg = "#181926", bg = "#A6DA95" },
+	tab = { fg = "#181926", bg = "#363A4F" },
+	current_win = { fg = "#181926", bg = "#EED49F" },
+	win = { fg = "#181926", bg = "#A6DA95" },
+	tail = { fg = "#181926", bg = "#F5A97F" },
 }
 require("tabby.tabline").set(function(line)
 	return {

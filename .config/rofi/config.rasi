@@ -7,10 +7,10 @@
 
 * {
 	font						: "Inconsolata Nerd Font Bold 22";
-	foreground					: #ECEFF4;
-	background-color			: #2E3440;
-	active-background			: #81A1C1;
-	urgent-background			: #d08770;
+	foreground					: #CAD3F5;
+	background-color			: #181926;
+	active-background			: #8AADF4;
+	urgent-background			: #ED8796;
 	selected-background			: @active-background;
 	selected-urgent-background	: @urgent-background;
 	selected-active-background	: @active-background;
