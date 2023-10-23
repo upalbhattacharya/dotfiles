@@ -21,3 +21,7 @@ style = "Italic"
 [font.normal]
 family = "Inconsolata Nerd Font"
 style = "Regular"
+
+[window.padding]
+x = 5
+y = 1

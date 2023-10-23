@@ -78,7 +78,7 @@ plugins=(
     zsh-vi-mode
     zsh-syntax-highlighting
     zsh-autosuggestions
-    zsh-autocomplete
+    # zsh-autocomplete
 )
 # zsh-autocomplete
 zstyle ':autocomplete:*' min-input 2  # seconds (float)
