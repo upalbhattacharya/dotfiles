@@ -10,7 +10,7 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="candy"
+ZSH_THEME="refined"
 
 
 # Set list of themes to pick from when loading at random
