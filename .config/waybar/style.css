@@ -1,0 +1,162 @@
+@import "mocha.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Inconsolata Nerd Font Mono;
+  font-weight: 600;
+  font-size: 18px;
+  min-height: 0;
+}
+
+#window {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+window#waybar {
+  background-color: @mantle;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+#workspaces button {
+  background-color: @mantle;
+  color: @text;
+  font-weight: 600;
+}
+
+#workspaces button.active {
+  background-color: @surface0;
+  color: @green;
+}
+#workspace button.urgent {
+  background-color: @red;
+  color: @mantle;
+}
+
+#window,
+#pulseaudio,
+#custom-memory,
+#cpu,
+#temperature,
+#battery,
+#network,
+#backlight,
+#clock {
+  padding-left: 8px;
+  padding-right: 8px;
+  border-left: inset;
+}
+
+/* #window { */
+/*   background-color: @surface0; */
+/*   color: @text; */
+/* } */
+
+#tray {
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: 40px;
+}
+
+#pulseaudio {
+  background-color: @rosewater;
+  color: @mantle;
+}
+
+#custom-memory {
+  background-color: @pink;
+  color: @mantle;
+}
+
+#cpu {
+  background-color: @mauve;
+  color: @mantle;
+}
+#temperature {
+  background-color: @red;
+  color: @mantle;
+}
+#battery {
+  background-color: @peach;
+  color: @mantle;
+}
+#network {
+  background-color: @yellow;
+  color: @mantle;
+}
+#backlight {
+  background-color: @green;
+  color: @mantle;
+}
+#clock {
+  background-color: @lavender;
+  color: @mantle;
+}
+#custom-separatorleft {
+  font-size: 30px;
+  background-color: transparent;
+  color: @rosewater;
+}
+#custom-separatorleft.2 {
+  font-size: 30px;
+  background-color: @rosewater;
+  color: @pink;
+}
+#custom-separatorleft.3 {
+  font-size: 30px;
+  background-color: @pink;
+  color: @mauve;
+}
+#custom-separatorleft.4 {
+  font-size: 30px;
+  background-color: @mauve;
+  color: @red;
+}
+#custom-separatorleft.5 {
+  font-size: 30px;
+  background-color: @red;
+  color: @peach;
+}
+#custom-separatorleft.6 {
+  font-size: 30px;
+  background-color: @peach;
+  color: @yellow;
+}
+#custom-separatorleft.7 {
+  font-size: 30px;
+  background-color: @yellow;
+  color: @green;
+}
+#custom-separatorleft.8 {
+  font-size: 30px;
+  background-color: @green;
+  color: @lavender;
+}
+@keyframes scroll {
+  from {
+    background-position: -33.941125497px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
