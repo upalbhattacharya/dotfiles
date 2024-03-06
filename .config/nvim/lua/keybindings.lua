@@ -35,6 +35,13 @@ vim.keymap.set("n", "<leader>fs", ":Telescope file_browser<CR>", {
 	desc = "Telescope file browser",
 })
 
+vim.keymap.set("n", "<leader>fm", builtin.marks, {
+	desc = "Telescope marks",
+})
+vim.keymap.set("n", "<leader>fr", builtin.registers, {
+	desc = "Telescope registers",
+})
+
 -- aerial.nvim
 vim.keymap.set("n", "<leader>ai", "<CMD>AerialToggle<CR>", {
 	desc = "Aerial toggle",

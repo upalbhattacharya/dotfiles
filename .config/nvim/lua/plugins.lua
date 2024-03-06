@@ -79,4 +79,5 @@ return require("packer").startup(function()
 	use("m4xshen/hardtime.nvim")
 	-- nvim-surround
 	use("kylechui/nvim-surround")
+	use("chentoast/marks.nvim")
 end)

@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:/home/workboots/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -10,7 +10,7 @@ export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="refined"
+ZSH_THEME="candy"
 
 
 # Set list of themes to pick from when loading at random
@@ -75,13 +75,13 @@ ZSH_THEME="refined"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    zsh-autosuggestions
     zsh-vi-mode
     zsh-syntax-highlighting
-    zsh-autosuggestions
     # zsh-autocomplete
 )
 # zsh-autocomplete
-zstyle ':autocomplete:*' min-input 2  # seconds (float)
+# zstyle ':autocomplete:*' min-input 2  # seconds (float)
 # zstyle ':autocomplete:*' default-context history-incremental-search-backward
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +108,7 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # Qt5 scaling factor
-export QT_SCALE_FACTOR=1.5
+export QT_SCALE_FACTOR=1
 
 #
 # Example aliases
@@ -120,7 +120,7 @@ alias getgpu="glxinfo | grep "OpenGL""
 alias listinstalled="grep -i installed /var/log/pacman.log"
 alias config="/usr/bin/git --git-dir=$HOME/Repos/dotfiles --work-tree=$HOME"
 alias listuserinstalled="comm -23 <(pacman -Qqett | sort) <(pacman -Qqg base -g base-devel | sort | uniq)"
-alias setdisplays="xrandr --output HDMI-0 --auto --scale 1.3334x1.3334 --right-of eDP-1-1"
+alias setdisplays="xrandr --output HDMI-0 --auto --scale 1.3334x1.3334 --output eDP-1-1 --auto --pos 2561x0"
 alias obsidian="source /home/workboots/Utilities/sync_start_obsidian.sh"
 alias obsidian_sync="source /home/workboots/Vaults/obsidian_sync"
 alias o_sync="obsidian_sync"
@@ -138,4 +138,4 @@ function optimusswitch () {
 # vi mode
 # bindkey -v
 
-tmux ls
+# tmux ls

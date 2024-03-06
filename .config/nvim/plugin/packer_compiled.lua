@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/workboots/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?.lua;/home/workboots/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?/init.lua;/home/workboots/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?.lua;/home/workboots/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/workboots/.cache/nvim/packer_hererocks/2.1.1694285958/lib/lua/5.1/?.so"
+local package_path_str = "/home/workboots/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/workboots/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/workboots/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/workboots/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/workboots/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -125,6 +130,16 @@ _G.packer_plugins = {
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["hardtime.nvim"] = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
+    url = "https://github.com/m4xshen/hardtime.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -145,6 +160,11 @@ _G.packer_plugins = {
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/marks.nvim",
+    url = "https://github.com/chentoast/marks.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -164,11 +184,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/neogen",
     url = "https://github.com/danymat/neogen"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -194,6 +209,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -225,6 +245,11 @@ _G.packer_plugins = {
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/tabby.nvim",
     url = "https://github.com/nanozuki/tabby.nvim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -249,6 +274,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/workboots/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/workboots/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

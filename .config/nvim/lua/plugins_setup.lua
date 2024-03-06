@@ -49,9 +49,7 @@ require("nvim_comment").setup()
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
 
-require("indent_blankline").setup({
-	show_end_of_line = true,
-})
+require("ibl").setup()
 require("nvim-tree").setup()
 require("leap").add_default_mappings()
 require("diffview").setup()
@@ -81,3 +79,4 @@ map.setup({
 require("which-key").setup()
 
 require("nvim-surround").setup()
+require("marks").setup()

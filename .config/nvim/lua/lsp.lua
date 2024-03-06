@@ -124,7 +124,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.markdownlint.with({
 			extra_args = { "--line-length", "79" },
 		}),
-		null_ls.builtins.diagnostics.yamllint,
+		-- null_ls.builtins.diagnostics.yamllint,
 		-- null_ls.builtins.diagnostics.eslint_d,
 	},
 })

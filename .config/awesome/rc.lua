@@ -388,7 +388,7 @@ globalkeys = mytable.join(
 
 	-- By-direction client focus
 	awful.key({ modkey }, "j", function()
-		awful.client.focus.global_bydirection("down")
+		awful.ciiilient.focus.global_bydirection("down")
 		if client.focus then
 			client.focus:raise()
 		end
@@ -902,7 +902,7 @@ client.connect_signal("manage", function(c)
 	-- if not awesome.startup then awful.client.setslave(c) end
 
 	if awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
-		-- Prevent clients from being unreachable after screen count changes.
+		-- Prevent clients from being unreach
 		awful.placement.no_offscreen(c)
 	end
 end)

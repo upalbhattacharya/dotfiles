@@ -5,6 +5,7 @@ xidlehook \
     --detect-sleep \
     --not-when-fullscreen \
     --not-when-audio \
+    --socket "/tmp/xidlehook.sock" \
     --timer 270 \
     'notify-send "Lockscreen" "System will enable lockscreen in 30 seconds" ' \
     '' \
