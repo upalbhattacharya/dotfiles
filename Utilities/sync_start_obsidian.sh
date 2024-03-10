@@ -5,9 +5,9 @@ graceful_exit() {
     local VAULT_PATH="/home/workboots/Vaults"
     cd "$VAULT_PATH"
     if [ $(git status --porcelain | wc -l) -ne 0 ]; then
-        echo "$(date +"%Y-%m-%d %H:%M:%S %z") $(git status --porcelain)" >> /tmp/obsidian.log
+        echo "$(date +"%Y-%m-%d %T %z") $(git status --porcelain)" >> /tmp/obsidian.log
         git add --all
-        git commit -q -m "Arch Sync: $(date +"%Y-%m-%d %H:%M:%S %z")"
+        git commit -q -m "Arch Sync: $(date +"%Y-%m-%d %T %z")"
         git push
     else
         echo "No changes. Exiting"
@@ -20,7 +20,7 @@ trap 'graceful_exit' SIGTERM SIGKILL SIGINT
 i=0
 
 # Interval (in seconds)
-INTERVAL=300
+INTERVAL=180
 
 # Execute a sync with remote before launching
 VAULT_PATH="/home/workboots/Vaults"
@@ -32,18 +32,18 @@ notify-send -u normal "Obsidian Sync" "Syncing with remote. Starting Obsidian af
 
 # Sync with remote
 if [ $(git status --porcelain | wc -l) -ne 0 ]; then
-    echo "$(date +"%Y-%m-%d %H:%M:%S %z") $(git status --porcelain)" >> /tmp/obsidian.log
+    echo "$(date +"%Y-%m-%d %T %z") $(git status --porcelain)" >> /tmp/obsidian.log
     git add --all
-    git commit -q -m "Arch Sync: $(date +"%Y-%m-%d %H:%M:%S %z")"
+    git commit -q -m "Arch Sync: $(date +"%Y-%m-%d %T %z")"
     git fetch
     git merge --no-edit
     git add --all
-    git commit -q -m "Arch Automerge Sync: $(date +"%Y-%m-%d %H:%M:%S %z")"
+    git commit -q -m "Arch Automerge Sync: $(date +"%Y-%m-%d %T %z")"
     git push >> /tmp/obsidian.log
 else
     git fetch
     git merge --no-edit
-    git commit -q -m "Arch Automerge Sync: $(date +"%Y-%m-%d %H:%M:%S %z")"
+    git commit -q -m "Arch Automerge Sync: $(date +"%Y-%m-%d %T %z")"
     git push >> /tmp/obsidian.log
 fi
 
